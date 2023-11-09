@@ -1,0 +1,62 @@
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  background: #dbf4fb;
+  padding: 20px 50px;
+  gap: 20px;
+}
+
+h2 {
+  margin-top: 15px;
+}
+
+.hints {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+p {
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+button {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #ff8f7f;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+button:hover {
+  opacity: 0.8;
+  transition: 130ms;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input {
+  display: flex;
+  width: 384px;
+  padding: 12px 20px;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #d3d3d3;
+  background: #fcfcfc;
+  outline: none;
+}

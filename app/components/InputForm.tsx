@@ -1,13 +1,14 @@
+import Link from "next/link";
 import React from "react";
 
 interface Props {
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
-  setQuestionNum: React.Dispatch<React.SetStateAction<number>>;
   handleSubmit: (e: React.FormEvent) => void;
+  questionsNum: number;
 }
 
-const InputForm = ({ input, setInput, handleSubmit }: Props) => {
+const InputForm = ({ input, setInput, handleSubmit, questionsNum }: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -16,7 +17,13 @@ const InputForm = ({ input, setInput, handleSubmit }: Props) => {
         onChange={(e) => setInput(e.target.value)}
         value={input}
       />
-      <button>Submit</button>
+      {questionsNum <= 3 ? (
+        <button>Submit</button>
+      ) : (
+        <Link href={"/conclusion"} style={{ textDecoration: "underline" }}>
+          See results
+        </Link>
+      )}
     </form>
   );
 };
